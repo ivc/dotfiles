@@ -12,5 +12,7 @@ func NewRootCmd(app *cli.App) *cobra.Command {
 		Short: "A command-line tool for managing and synchronizing dotfiles via Git repositories.",
 	}
 
+	rootCmd.AddCommand(newInstallCmd(app))
+
 	return rootCmd
 }
